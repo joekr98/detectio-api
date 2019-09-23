@@ -30,7 +30,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    res.send(database.users);
+    res.send('Working PogU');
 })
 
 app.post('/signin', (req, res) => {signin.handleSignIn(req, res, db, bcrypt)});
