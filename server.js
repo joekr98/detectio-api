@@ -43,6 +43,6 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)});
 
 app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)});
 
-app.listen(1337, () => {
-    console.log('peepoPog on 1337');
+app.listen(process.env.PORT || 1337, () => {
+    console.log(`App running on port ${process.env.PORT}`);
 })
