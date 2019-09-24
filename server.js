@@ -16,10 +16,8 @@ const profile = require('./controllers/profile');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-globular-59260',
-        user: 'postgres',
-        password: '12Brianmay',
-        database: 'detectiodb'
+        host: process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
